@@ -1,0 +1,38 @@
+🚑 Use Case: Emergency Response & Ambulance Dispatch System
+🎯 Objective
+Develop a real-time system for hospitals to:
+Log emergency cases.
+Allocate ambulances based on proximity, availability, and urgency.
+Track ambulance location and ETA.
+Coordinate with ER staff for patient intake.
+🔑 Core Features
+1. Emergency Case Logging
+Admin or triage staff logs emergency cases with:
+Patient details (if known)
+Emergency type (accident, cardiac, trauma, etc.)
+Location (auto-detected or manually entered)
+Priority level (1–5)
+2. Ambulance Allocation Engine
+Automatically assigns the nearest available ambulance.
+Factors in:
+Distance to emergency site
+Current traffic (optional via API)
+Ambulance type (basic, ICU, neonatal)
+Crew fatigue and shift status
+3. Live Ambulance Tracking
+Use GPS (mocked or real) to track ambulance location.
+Display route and ETA on a map (e.g., Google Maps API).
+Update hospital dashboard in real-time.
+4. ER Coordination Dashboard
+Notify ER staff of incoming patients.
+Show patient condition, ETA, and required resources.
+Allow staff to prepare beds, equipment, and specialists.
+5. Calendar & Shift Integration
+Show ambulance crew shifts in a calendar view.
+Prevent over-scheduling and ensure rest periods.
+Allow manual overrides in emergencies.
+6. Notifications & Alerts
+SMS/email/push alerts to:
+Ambulance crew
+ER staff
+Patient’s emergency contact (optional)
