@@ -14,3 +14,9 @@ npm i uuid
 <!-- ======================= For File Upload =======================-->
 npm i multer
 npm i --save-dev @types/multer
+
+
+
+
+//React
+npm create vite@latest
