@@ -20,3 +20,5 @@ npm i --save-dev @types/multer
 
 //React
 npm create vite@latest
+
+npm create vite@latest my-react-ts-app -- --template react-ts
