@@ -1,0 +1,58 @@
+// ExampleComponent.tsx
+import React, { useState } from 'react';
+import { Avatar, IconButton } from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
+
+import { BasicTable, Column } from './components/BasicTable';
+import BasicPagination from './components/BasicPagination';
+
+interface UserData {
+  id: number;
+  name: string;
+  avatarUrl: string;
+}
+
+const users: UserData[] = Array.from({ length: 50 }, (_, i) => ({
+  id: i + 1,
+  name: `User ${i + 1}`,
+  avatarUrl: `https://i.pravatar.cc/150?img=${i + 1}`,
+}));
+
+const ExampleComponent: React.FC = () => {
+  const [page, setPage] = useState(1);
+  const rowsPerPage = 5;
+  const totalPages = Math.ceil(users.length / rowsPerPage);
+
+  const handlePageChange = (_: React.ChangeEvent<unknown>, value: number) => {
+    setPage(value);
+  };
+
+  const paginatedData = users.slice((page - 1) * rowsPerPage, page * rowsPerPage);
+
+  const columns: Column<UserData>[] = [
+    {
+      key: 'avatarUrl',
+      label: 'Avatar',
+      render: (row) => <Avatar src={row.avatarUrl} alt={row.name} />,
+    },
+    { key: 'name', label: 'Name' },
+    {
+      key: 'id',
+      label: 'Action',
+      render: (row) => (
+        <IconButton onClick={() => alert(`Edit ${row.name}`)}>
+          <EditIcon />
+        </IconButton>
+      ),
+    },
+  ];
+
+  return (
+    <>
+      <BasicTable columns={columns} data={paginatedData} getRowKey={(row) => row.id} />
+      <BasicPagination page={page} count={totalPages} onChange={handlePageChange} />
+    </>
+  );
+};
+
+export default ExampleComponent;
