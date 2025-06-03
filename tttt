@@ -1,0 +1,17 @@
+ email:
+ role:  {
+    ADMIN = 'Admin',
+    TRIAGE = 'Triage',
+    DISPATCHER = 'Dispatcher',
+    ER_STAFF = 'ERStaff',
+    AMBULANCE_CREW_DRIVER = 'AmbulanceCrew-Driver',
+    AMBULANCE_CREW_MEDIC = 'AmbulanceCrew-Medic',
+    PATIENT = 'Patient'
+} dropdown
+ name: 
+ shiftType: ['regular', 'emergency_override']; dropdown
+ shiftStartTime: 
+ shiftEndTime: 
+ gender: ['Male', 'Female']; dropdown
+ mobile: 
+ address:
