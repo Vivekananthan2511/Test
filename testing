@@ -1,0 +1,12 @@
+
+       { patientname:string,
+        mobile: number,
+        gender: ['Male', 'Female]
+        location: String,
+        emergencyType: ['Accident', 'Cardiac', 'trauma'];
+        priority: [1,2,3,4,5],
+        status: ["Not Assigned", "en_route", "on_scene", "at_hospital", "closed"]
+        incidentDescription: String,
+        ambulanceId: options from api[] single select
+        crewMembers:  options from api[] multiselect
+    },
