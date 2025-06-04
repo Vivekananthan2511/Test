@@ -1,0 +1,11 @@
+@mui_material.js?v=f7675ca4:31558 Uncaught Error: MUI: The `value` prop must be an array when using the `Select` component with `multiple`.
+    at @mui_material.js?v=f7675ca4:31558:15
+    at Array.map (<anonymous>)
+    at SelectInput2 (@mui_material.js?v=f7675ca4:31546:31)
+    at react-stack-bottom-frame (react-dom_client.js?v=f7675ca4:17424:20)
+    at renderWithHooks (react-dom_client.js?v=f7675ca4:4206:24)
+    at updateForwardRef (react-dom_client.js?v=f7675ca4:6461:21)
+    at beginWork (react-dom_client.js?v=f7675ca4:7864:20)
+    at runWithFiberInDEV (react-dom_client.js?v=f7675ca4:1485:72)
+    at performUnitOfWork (react-dom_client.js?v=f7675ca4:10868:98)
+    at workLoopSync (react-dom_client.js?v=f7675ca4:10728:43)
